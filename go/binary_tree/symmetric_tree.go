@@ -1,4 +1,4 @@
-package binary_tree
+package main
 
 func isSymmetric(root *TreeNode) bool {
 	if root == nil {

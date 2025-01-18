@@ -1,4 +1,4 @@
-package binary_tree
+package main
 
 func zigzagLevelOrder(root *TreeNode) [][]int {
 	if root == nil {

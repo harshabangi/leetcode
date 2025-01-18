@@ -1,4 +1,4 @@
-package binary_tree
+package main
 
 func diameterOfBinaryTree(root *TreeNode) int {
 	if root == nil {
