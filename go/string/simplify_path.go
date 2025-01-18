@@ -3,11 +3,11 @@ package main
 import "fmt"
 
 type Stack[T any] struct {
-	Elements []T
+	data []T
 }
 
 func (s *Stack[T]) Size() int {
-	return len(s.Elements)
+	return len(s.data)
 }
 
 func (s *Stack[T]) IsEmpty() bool {
@@ -15,14 +15,14 @@ func (s *Stack[T]) IsEmpty() bool {
 }
 
 func (s *Stack[T]) Push(x T) {
-	s.Elements = append(s.Elements, x)
+	s.data = append(s.data, x)
 }
 
 func (s *Stack[T]) Top() T {
 	if s.IsEmpty() {
 		panic("stack is empty")
 	}
-	return s.Elements[s.Size()-1]
+	return s.data[s.Size()-1]
 }
 
 func (s *Stack[T]) Pop() T {
@@ -30,8 +30,8 @@ func (s *Stack[T]) Pop() T {
 		panic("stack is empty")
 	}
 	n := s.Size() - 1
-	t := s.Elements[n]
-	s.Elements = s.Elements[:n]
+	t := s.data[n]
+	s.data = s.data[:n]
 	return t
 }
 

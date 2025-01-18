@@ -1,33 +1,4 @@
-package binary_tree
-
-type Queue[T any] struct {
-	Elements []T
-}
-
-func (q *Queue[T]) Size() int {
-	return len(q.Elements)
-}
-
-func (q *Queue[T]) IsEmpty() bool {
-	return q.Size() == 0
-}
-
-func (q *Queue[T]) Push(inp T) {
-	q.Elements = append(q.Elements, inp)
-}
-
-func (q *Queue[T]) Pop() *T {
-	if q.IsEmpty() {
-		return nil
-	}
-	top := q.Elements[0]
-	q.Elements = q.Elements[1:]
-	return &top
-}
-
-func newQueue[T any]() *Queue[T] {
-	return &Queue[T]{}
-}
+package main
 
 func levelOrder(root *TreeNode) [][]int {
 	if root == nil {
