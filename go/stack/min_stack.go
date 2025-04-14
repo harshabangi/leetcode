@@ -5,10 +5,6 @@ type MinStack struct {
 	data     []int
 }
 
-func Constructor() MinStack {
-	return MinStack{}
-}
-
 func (this *MinStack) Push(val int) {
 	if len(this.data) == 0 {
 		this.minimums = append(this.minimums, val)
