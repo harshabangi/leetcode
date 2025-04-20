@@ -2,11 +2,6 @@ package main
 
 import "fmt"
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
 func deleteNode(node *ListNode) {
 	t := node.Next.Val
 	node.Next.Val = node.Val
